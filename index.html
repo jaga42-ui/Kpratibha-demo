@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="KPratibha Academy – Trusted CBSE, ICSE & Board coaching in Sambalpur, Odisha. Class IV–X tuition with expert faculty, personal attention and proven results.">
+<title>KPratibha Academy | Premier Coaching Institute – Sambalpur, Odisha</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ─────────────────────────────────────────
+   DESIGN TOKENS
+───────────────────────────────────────── */
+:root {
+  /* Brand palette */
+  --navy:        #0B1D3A;
+  --navy-2:      #122347;
+  --blue:        #1A56DB;
+  --blue-lt:     #3B82F6;
+  --blue-pale:   #EFF6FF;
+  --blue-mist:   #DBEAFE;
+  --teal:        #0EA5E9;
+  --amber:       #F59E0B;
+  --orange:      #F97316;
+  --green:       #10B981;
+  --red-soft:    #FEE2E2;
+
+  /* Neutral */
+  --white:       #FFFFFF;
+  --surface:     #F8FAFF;
+  --surface-2:   #F1F5FD;
+  --border:      #E2EAF8;
+  --border-2:    rgba(26,86,219,0.12);
+  --ink:         #0B1D3A;
+  --ink-2:       #2D4270;
+  --ink-3:       #6880A8;
+  --ink-4:       #A0B0CC;
+
+  /* Shadows */
+  --s1: 0 1px 4px rgba(11,29,58,0.06), 0 4px 16px rgba(11,29,58,0.06);
+  --s2: 0 4px 12px rgba(11,29,58,0.08), 0 16px 40px rgba(11,29,58,0.10);
+  --s3: 0 8px 24px rgba(11,29,58,0.10), 0 32px 64px rgba(11,29,58,0.14);
+  --s-blue: 0 8px 32px rgba(26,86,219,0.28);
+  --s-orange: 0 8px 28px rgba(249,115,22,0.30);
+
+  /* Radii */
+  --r-xs: 8px;  --r-sm: 12px; --r-md: 16px;
+  --r-lg: 20px; --r-xl: 24px; --r-2xl: 32px;
+
+  /* Typography */
+  --ff-head: 'Outfit', sans-serif;
+  --ff-body: 'Poppins', sans-serif;
+
+  /* Motion */
+  --ease: cubic-bezier(.4,0,.2,1);
+  --ease-spring: cubic-bezier(.34,1.56,.64,1);
+}
+
+/* ─────────────────────────────────────────
+   RESET
+───────────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--ff-body);color:var(--ink);background:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul,ol{list-style:none}
+button{cursor:pointer;font-family:inherit;border:none}
+input,select,textarea{font-family:inherit}
+
+/* ─────────────────────────────────────────
+   UTILITIES
+───────────────────────────────────────── */
+.wrap{max-width:1160px;margin:0 auto;padding:0 1.1rem}
+.sp{padding:4rem 0}
+
+/* Scroll reveal */
+.rev{opacity:0;transform:translateY(22px);transition:opacity .65s var(--ease),transform .65s var(--ease)}
+.rev.on{opacity:1;transform:none}
+.rev-d1{transition-delay:.08s}
+.rev-d2{transition-delay:.16s}
+.rev-d3{transition-delay:.24s}
+.rev-d4{transition-delay:.32s}
+
+/* Section header */
+.sh{text-align:center;margin-bottom:2.5rem}
+.sh .eyebrow{
+  display:inline-flex;align-items:center;gap:.4rem;
+  background:var(--blue-pale);color:var(--blue);
+  border:1px solid var(--blue-mist);border-radius:50px;
+  padding:.3rem .9rem;font-size:.72rem;font-weight:700;
+  letter-spacing:.07em;text-transform:uppercase;margin-bottom:.9rem;
+}
+.sh h2{
+  font-family:var(--ff-head);font-size:clamp(1.5rem,4.5vw,2.1rem);
+  font-weight:800;color:var(--navy);line-height:1.2;margin-bottom:.5rem;
+}
+.sh p{color:var(--ink-2);font-size:.93rem;line-height:1.7;max-width:480px;margin:0 auto}
+
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.45rem;
+  font-family:var(--ff-head);font-weight:700;font-size:.92rem;
+  border-radius:50px;padding:.82rem 1.65rem;line-height:1;
+  transition:all .22s var(--ease);border:none;white-space:nowrap;
+}
+.btn-primary{
+  background:linear-gradient(135deg,var(--blue) 0%,var(--blue-lt) 100%);
+  color:var(--white);box-shadow:var(--s-blue);
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(26,86,219,.38)}
+.btn-primary:active{transform:translateY(0)}
+.btn-warm{
+  background:linear-gradient(135deg,var(--orange) 0%,#FBBF24 100%);
+  color:var(--white);box-shadow:var(--s-orange);
+}
+.btn-warm:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(249,115,22,.40)}
+.btn-ghost{
+  background:rgba(255,255,255,.12);color:var(--white);
+  border:1.5px solid rgba(255,255,255,.28);
+  backdrop-filter:blur(8px);
+}
+.btn-ghost:hover{background:rgba(255,255,255,.22);transform:translateY(-2px)}
+.btn-w{width:100%}
+
+/* Tags / chips */
+.tag{
+  display:inline-flex;align-items:center;gap:.3rem;
+  background:var(--blue-pale);color:var(--blue);
+  border:1px solid var(--blue-mist);border-radius:50px;
+  padding:.28rem .75rem;font-size:.72rem;font-weight:600;
+}
+
+/* ─────────────────────────────────────────
+   KEYFRAMES
+───────────────────────────────────────── */
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes waPulse{0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,.45)}70%{box-shadow:0 0 0 14px rgba(37,211,102,0)}}
+@keyframes slideDown{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes glowBlue{0%,100%{opacity:.5}50%{opacity:1}}
+@keyframes countUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+/* ─────────────────────────────────────────
+   NAVBAR
+───────────────────────────────────────── */
+#nav{
+  position:fixed;inset:0 0 auto;z-index:1000;
+  background:rgba(255,255,255,.88);
+  backdrop-filter:blur(24px) saturate(180%);
+  -webkit-backdrop-filter:blur(24px) saturate(180%);
+  border-bottom:1px solid var(--border);
+  transition:box-shadow .3s var(--ease),background .3s var(--ease);
+}
+#nav.scrolled{background:rgba(255,255,255,.97);box-shadow:var(--s2)}
+.nav-row{display:flex;align-items:center;justify-content:space-between;padding:.75rem 1.1rem}
+
+/* Logo */
+.logo{display:flex;align-items:center;gap:.65rem}
+.logo-icon{
+  width:40px;height:40px;border-radius:11px;flex-shrink:0;
+  background:linear-gradient(140deg,var(--navy) 0%,var(--blue) 100%);
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-family:var(--ff-head);font-weight:800;font-size:1.15rem;
+  box-shadow:0 4px 14px rgba(26,86,219,.35);
+  position:relative;overflow:hidden;
+}
+.logo-icon::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(255,255,255,.18) 0%,transparent 60%);
+}
+.logo-text{line-height:1.1}
+.logo-name{font-family:var(--ff-head);font-size:1.02rem;font-weight:800;color:var(--navy)}
+.logo-loc{font-size:.6rem;color:var(--ink-3);font-weight:500}
+
+/* Desktop nav */
+.nav-d{display:none}
+
+/* Hamburger */
+.burger{
+  width:40px;height:40px;border-radius:10px;background:var(--blue-pale);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;
+  border:none;transition:background .2s;
+}
+.burger:hover{background:var(--blue-mist)}
+.burger b{display:block;width:18px;height:2px;background:var(--blue);border-radius:2px;transition:all .28s var(--ease)}
+.burger.x b:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.x b:nth-child(2){opacity:0;transform:scaleX(0)}
+.burger.x b:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* Mobile drawer */
+.drawer{
+  display:none;flex-direction:column;
+  background:var(--white);border-top:1px solid var(--border);
+  animation:slideDown .2s var(--ease);
+}
+.drawer.show{display:flex}
+.drawer a{
+  display:flex;align-items:center;gap:.7rem;
+  padding:.95rem 1.3rem;font-size:.9rem;font-weight:600;color:var(--ink-2);
+  border-bottom:1px solid var(--surface-2);transition:background .15s,color .15s;
+}
+.drawer a:hover{background:var(--surface);color:var(--blue)}
+.drawer a svg{width:18px;height:18px;opacity:.65}
+.drawer-cta{padding:1rem 1.1rem;background:var(--surface)}
+
+/* ─────────────────────────────────────────
+   ANNOUNCEMENT BAR
+───────────────────────────────────────── */
+.ann-bar{
+  background:linear-gradient(90deg,var(--navy) 0%,var(--blue) 100%);
+  color:#fff;font-size:.72rem;font-weight:600;text-align:center;
+  padding:.42rem 1rem;letter-spacing:.03em;
+  margin-top:73px;/* below fixed nav */
+}
+.ann-bar span{opacity:.7;margin:0 .5rem}
+
+/* ─────────────────────────────────────────
+   HERO
+───────────────────────────────────────── */
+#hero{
+  background:#F0F7FF;
+  background-image:
+    radial-gradient(ellipse 70% 60% at 90% 10%,rgba(26,86,219,.10) 0%,transparent 70%),
+    radial-gradient(ellipse 50% 50% at 5% 90%,rgba(14,165,233,.08) 0%,transparent 65%);
+  position:relative;overflow:hidden;padding:3rem 0 3.5rem;
+}
+.hero-grid{position:relative;z-index:1}
+.hero-content{}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:#fff;border:1px solid var(--border);border-radius:50px;
+  padding:.38rem 1rem .38rem .5rem;margin-bottom:1.3rem;
+  box-shadow:var(--s1);
+  animation:slideDown .5s var(--ease) .1s both;
+}
+.badge-pill{
+  background:linear-gradient(135deg,var(--amber),#FDE68A);
+  color:var(--navy);border-radius:50px;padding:.18rem .6rem;
+  font-size:.65rem;font-weight:800;letter-spacing:.04em;
+}
+.badge-txt{font-size:.75rem;font-weight:600;color:var(--ink-2)}
+.hero-h1{
+  font-family:var(--ff-head);font-size:clamp(1.9rem,6.5vw,3.4rem);
+  font-weight:800;line-height:1.12;color:var(--navy);
+  margin-bottom:.9rem;
+  animation:slideDown .55s var(--ease) .18s both;
+}
+.hero-h1 .hl{
+  background:linear-gradient(135deg,var(--blue) 0%,var(--teal) 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.hero-sub{
+  font-size:.96rem;line-height:1.75;color:var(--ink-2);
+  margin-bottom:1.8rem;font-weight:400;
+  animation:slideDown .55s var(--ease) .25s both;
+}
+.hero-tags{
+  display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2rem;
+  animation:slideDown .55s var(--ease) .3s both;
+}
+.hero-ctas{
+  display:flex;flex-direction:column;gap:.7rem;
+  animation:slideDown .55s var(--ease) .35s both;
+}
+.hero-rating{
+  display:flex;align-items:center;gap:.55rem;
+  margin-top:1.5rem;
+  animation:slideDown .55s var(--ease) .42s both;
+}
+.rating-stars{font-size:1.1rem;letter-spacing:-.05rem;color:var(--amber)}
+.rating-txt{font-size:.8rem;font-weight:600;color:var(--ink-2)}
+.rating-count{font-size:.72rem;color:var(--ink-3)}
+
+/* Hero visual */
+.hero-visual{
+  display:flex;justify-content:center;align-items:center;
+  margin-top:2.5rem;
+  animation:slideDown .7s var(--ease) .45s both;
+}
+.hero-svg-wrap{animation:float 5.5s ease-in-out infinite}
+.hero-visual svg{width:100%;max-width:330px;height:auto}
+
+/* Stats bar below hero */
+.stats-bar{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:.75rem;margin-top:2.2rem;
+  animation:slideDown .55s var(--ease) .5s both;
+}
+.stat-tile{
+  background:#fff;border:1px solid var(--border);border-radius:var(--r-md);
+  padding:.9rem .7rem;text-align:center;box-shadow:var(--s1);
+  position:relative;overflow:hidden;
+}
+.stat-tile::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--blue),var(--teal));
+  border-radius:2px 2px 0 0;
+}
+.stat-n{font-family:var(--ff-head);font-size:1.55rem;font-weight:800;color:var(--blue);line-height:1}
+.stat-l{font-size:.64rem;color:var(--ink-3);font-weight:600;margin-top:.25rem;line-height:1.3;text-transform:uppercase;letter-spacing:.04em}
+
+/* ─────────────────────────────────────────
+   TRUST STRIP
+───────────────────────────────────────── */
+.trust-strip{
+  background:var(--navy);padding:1.25rem 0;
+}
+.trust-inner{
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:center;
+  gap:1rem 2rem;
+}
+.trust-item{
+  display:flex;align-items:center;gap:.5rem;
+  font-size:.78rem;font-weight:600;color:rgba(255,255,255,.8);
+}
+.trust-item svg{width:16px;height:16px;color:var(--amber)}
+
+/* ─────────────────────────────────────────
+   COURSES
+───────────────────────────────────────── */
+#courses{background:var(--white)}
+.c-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.c-card{
+  border:1px solid var(--border);border-radius:var(--r-xl);
+  padding:1.4rem 1.2rem;background:var(--white);
+  box-shadow:var(--s1);transition:all .28s var(--ease);
+  position:relative;overflow:hidden;cursor:default;
+}
+.c-card::after{
+  content:'';position:absolute;inset:0;border-radius:inherit;
+  background:linear-gradient(135deg,var(--blue-pale) 0%,transparent 60%);
+  opacity:0;transition:opacity .28s;
+}
+.c-card:hover{transform:translateY(-5px);box-shadow:var(--s2);border-color:var(--blue-mist)}
+.c-card:hover::after{opacity:1}
+.c-icon{
+  width:50px;height:50px;border-radius:var(--r-sm);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.4rem;margin-bottom:1rem;position:relative;z-index:1;
+}
+.c-card h3{
+  font-family:var(--ff-head);font-size:1rem;font-weight:700;
+  color:var(--navy);margin-bottom:.35rem;position:relative;z-index:1;
+}
+.c-card p{font-size:.78rem;color:var(--ink-2);line-height:1.6;position:relative;z-index:1}
+.c-tag{margin-top:.85rem;position:relative;z-index:1}
+
+/* ─────────────────────────────────────────
+   WHY US
+───────────────────────────────────────── */
+#why{
+  background:linear-gradient(160deg,var(--surface) 0%,var(--blue-pale) 100%);
+}
+.w-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.w-card{
+  background:rgba(255,255,255,.75);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,.9);border-radius:var(--r-xl);
+  padding:1.5rem 1.25rem;box-shadow:var(--s1);
+  transition:transform .28s var(--ease),box-shadow .28s var(--ease);
+}
+.w-card:hover{transform:translateY(-4px);box-shadow:var(--s2)}
+.w-ic{
+  width:46px;height:46px;border-radius:var(--r-sm);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:.9rem;font-size:1.25rem;
+}
+.w-card h3{font-family:var(--ff-head);font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:.35rem}
+.w-card p{font-size:.78rem;color:var(--ink-2);line-height:1.6}
+
+/* ─────────────────────────────────────────
+   RESULTS
+───────────────────────────────────────── */
+#results{background:var(--white)}
+.results-stats{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin-bottom:2.5rem;
+}
+.rs-tile{
+  background:linear-gradient(135deg,var(--navy) 0%,var(--blue) 100%);
+  border-radius:var(--r-xl);padding:1.4rem 1rem;text-align:center;
+  position:relative;overflow:hidden;
+}
+.rs-tile::before{
+  content:'';position:absolute;top:-20px;right:-20px;
+  width:80px;height:80px;border-radius:50%;
+  background:rgba(255,255,255,.06);
+}
+.rs-n{font-family:var(--ff-head);font-size:1.8rem;font-weight:800;color:#fff;line-height:1}
+.rs-l{font-size:.65rem;color:rgba(255,255,255,.65);font-weight:600;margin-top:.3rem;text-transform:uppercase;letter-spacing:.05em}
+
+/* Testimonials */
+.tscroll{
+  display:flex;gap:1rem;overflow-x:auto;padding-bottom:1rem;
+  scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+}
+.tscroll::-webkit-scrollbar{display:none}
+.t-card{
+  min-width:290px;max-width:320px;flex-shrink:0;scroll-snap-align:start;
+  background:var(--white);border:1px solid var(--border);border-radius:var(--r-xl);
+  padding:1.6rem;box-shadow:var(--s1);position:relative;overflow:hidden;
+  transition:box-shadow .25s;
+}
+.t-card:hover{box-shadow:var(--s2)}
+.t-card::before{
+  content:'"';position:absolute;top:-8px;right:16px;
+  font-size:5.5rem;color:var(--blue-pale);font-family:Georgia,serif;line-height:1;
+  pointer-events:none;
+}
+.t-stars{color:var(--amber);font-size:.85rem;letter-spacing:.08rem;margin-bottom:.75rem}
+.t-body{font-size:.82rem;line-height:1.7;color:var(--ink-2);margin-bottom:1.2rem}
+.t-author{display:flex;align-items:center;gap:.75rem}
+.t-av{
+  width:40px;height:40px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--ff-head);font-weight:800;font-size:.9rem;color:#fff;flex-shrink:0;
+}
+.t-name{font-size:.85rem;font-weight:700;color:var(--navy)}
+.t-role{font-size:.7rem;color:var(--ink-3)}
+.swipe-hint{
+  text-align:center;font-size:.72rem;color:var(--ink-4);
+  margin-top:.75rem;display:flex;align-items:center;justify-content:center;gap:.4rem;
+}
+
+/* Dot indicators */
+.t-dots{display:flex;justify-content:center;gap:.4rem;margin-top:1.1rem}
+.t-dot{
+  width:7px;height:7px;border-radius:50%;background:var(--border);
+  transition:all .3s var(--ease);cursor:pointer;border:none;
+}
+.t-dot.active{background:var(--blue);width:20px;border-radius:50px}
+
+/* ─────────────────────────────────────────
+   NOTICE BOARD
+───────────────────────────────────────── */
+#notices{background:var(--surface)}
+.n-list{display:flex;flex-direction:column;gap:.75rem}
+.n-item{
+  background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);
+  padding:1rem 1.2rem;display:flex;gap:1rem;align-items:flex-start;
+  box-shadow:var(--s1);transition:all .22s var(--ease);
+  border-left:3.5px solid transparent;
+}
+.n-item:hover{transform:translateX(5px);border-color:var(--border) var(--border) var(--border) var(--blue)}
+.n-item.type-new{border-left-color:var(--green)}
+.n-item.type-event{border-left-color:var(--blue)}
+.n-item.type-update{border-left-color:var(--orange)}
+.n-item:hover.type-new{border-left-color:var(--green)}
+.n-item:hover.type-event{border-left-color:var(--blue)}
+.n-item:hover.type-update{border-left-color:var(--orange)}
+.n-badge{
+  flex-shrink:0;padding:.22rem .6rem;border-radius:50px;
+  font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;margin-top:2px;
+}
+.n-badge.new{background:#DCFCE7;color:#166534}
+.n-badge.event{background:var(--blue-pale);color:var(--blue)}
+.n-badge.update{background:#FEF3C7;color:#92400E}
+.n-title{font-size:.88rem;font-weight:700;color:var(--navy);margin-bottom:.2rem;line-height:1.4}
+.n-desc{font-size:.76rem;color:var(--ink-2);line-height:1.5}
+.n-meta{font-size:.66rem;color:var(--ink-4);margin-top:.3rem;font-weight:500}
+
+/* ─────────────────────────────────────────
+   FACULTY
+───────────────────────────────────────── */
+#faculty{background:var(--white)}
+.f-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.f-card{
+  border:1px solid var(--border);border-radius:var(--r-xl);
+  overflow:hidden;box-shadow:var(--s1);
+  transition:transform .28s var(--ease),box-shadow .28s var(--ease);
+  background:var(--white);
+}
+.f-card:hover{transform:translateY(-5px);box-shadow:var(--s2)}
+.f-head{
+  padding:1.6rem 1rem 1.3rem;text-align:center;
+  background:linear-gradient(160deg,var(--navy) 0%,var(--blue) 100%);
+  position:relative;overflow:hidden;
+}
+.f-head::before{
+  content:'';position:absolute;top:-30px;right:-30px;
+  width:100px;height:100px;border-radius:50%;background:rgba(255,255,255,.06);
+}
+.f-head::after{
+  content:'';position:absolute;bottom:-20px;left:-20px;
+  width:70px;height:70px;border-radius:50%;background:rgba(255,255,255,.04);
+}
+.f-av{
+  width:68px;height:68px;border-radius:50%;margin:0 auto .75rem;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--ff-head);font-size:1.3rem;font-weight:800;color:#fff;
+  background:rgba(255,255,255,.18);border:2.5px solid rgba(255,255,255,.35);
+  position:relative;z-index:1;
+}
+.f-name{font-family:var(--ff-head);font-size:.92rem;font-weight:700;color:#fff;position:relative;z-index:1}
+.f-body{padding:1rem 1.1rem}
+.f-subj{font-size:.78rem;font-weight:700;color:var(--blue);margin-bottom:.6rem}
+.f-exp{
+  display:inline-flex;align-items:center;gap:.35rem;
+  background:#FEF3C7;color:#92400E;border-radius:50px;
+  padding:.22rem .7rem;font-size:.68rem;font-weight:700;
+}
+
+/* ─────────────────────────────────────────
+   ENQUIRY FORM
+───────────────────────────────────────── */
+#enquiry{
+  background:linear-gradient(150deg,var(--navy) 0%,#1A3A6B 50%,var(--blue) 100%);
+  position:relative;overflow:hidden;
+}
+#enquiry::before{
+  content:'';position:absolute;top:-100px;right:-100px;
+  width:400px;height:400px;border-radius:50%;
+  background:radial-gradient(circle,rgba(59,130,246,.2) 0%,transparent 70%);
+  pointer-events:none;
+}
+#enquiry::after{
+  content:'';position:absolute;bottom:-80px;left:-80px;
+  width:300px;height:300px;border-radius:50%;
+  background:radial-gradient(circle,rgba(14,165,233,.15) 0%,transparent 70%);
+  pointer-events:none;
+}
+.eq-inner{position:relative;z-index:1}
+.eq-top{text-align:center;margin-bottom:2rem}
+.eq-top .eyebrow{background:rgba(255,255,255,.12);color:rgba(255,255,255,.85);border-color:rgba(255,255,255,.2)}
+.eq-top h2{font-family:var(--ff-head);font-size:clamp(1.4rem,4vw,2rem);font-weight:800;color:#fff;margin-bottom:.5rem}
+.eq-top p{color:rgba(255,255,255,.65);font-size:.9rem}
+.form-shell{
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+  border:1px solid rgba(255,255,255,.14);border-radius:var(--r-2xl);
+  padding:2rem 1.5rem;
+}
+.fg{margin-bottom:.9rem}
+.fg label{display:block;font-size:.73rem;font-weight:700;color:rgba(255,255,255,.75);margin-bottom:.38rem;letter-spacing:.04em;text-transform:uppercase}
+.fg input,.fg select,.fg textarea{
+  width:100%;padding:.85rem 1.05rem;
+  border:1.5px solid rgba(255,255,255,.18);border-radius:var(--r-sm);
+  background:rgba(255,255,255,.08);color:#fff;
+  font-size:.88rem;outline:none;
+  transition:border-color .2s,background .2s,box-shadow .2s;
+  -webkit-appearance:none;
+}
+.fg input::placeholder,.fg textarea::placeholder{color:rgba(255,255,255,.35)}
+.fg input:focus,.fg select:focus,.fg textarea:focus{
+  border-color:rgba(255,255,255,.55);background:rgba(255,255,255,.13);
+  box-shadow:0 0 0 3px rgba(255,255,255,.06);
+}
+.fg select option{background:var(--navy);color:#fff}
+.fg textarea{resize:vertical;min-height:82px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+.submit-btn{
+  width:100%;margin-top:.5rem;padding:1.05rem;
+  background:linear-gradient(135deg,var(--orange) 0%,var(--amber) 100%);
+  color:#fff;border:none;border-radius:50px;
+  font-family:var(--ff-head);font-weight:800;font-size:1rem;
+  box-shadow:0 8px 28px rgba(249,115,22,.45);
+  transition:all .22s var(--ease);
+}
+.submit-btn:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(249,115,22,.55)}
+.submit-btn:active{transform:none}
+.form-note{text-align:center;font-size:.7rem;color:rgba(255,255,255,.45);margin-top:.75rem}
+
+/* ─────────────────────────────────────────
+   FOOTER
+───────────────────────────────────────── */
+#footer{background:var(--navy);color:rgba(255,255,255,.75)}
+.foot-top{padding:3rem 0 2rem;border-bottom:1px solid rgba(255,255,255,.08)}
+.foot-brand{margin-bottom:2.2rem}
+.foot-logo{display:flex;align-items:center;gap:.7rem;margin-bottom:.9rem}
+.foot-logo-ic{
+  width:44px;height:44px;border-radius:12px;
+  background:linear-gradient(135deg,var(--blue),var(--teal));
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-family:var(--ff-head);font-weight:800;font-size:1.2rem;
+}
+.foot-logo-name{font-family:var(--ff-head);font-size:1.05rem;font-weight:800;color:#fff}
+.foot-desc{font-size:.82rem;line-height:1.7;color:rgba(255,255,255,.5);max-width:280px;margin-bottom:1.2rem}
+.foot-social{display:flex;gap:.6rem}
+.soc{
+  width:36px;height:36px;border-radius:9px;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);
+  display:flex;align-items:center;justify-content:center;
+  font-size:.78rem;font-weight:700;color:rgba(255,255,255,.6);
+  transition:all .2s var(--ease);
+}
+.soc:hover{background:var(--blue);color:#fff;transform:translateY(-2px)}
+.foot-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.foot-col h4{font-family:var(--ff-head);font-size:.88rem;font-weight:700;color:#fff;margin-bottom:1rem}
+.foot-col ul li{margin-bottom:.55rem}
+.foot-col ul li a{font-size:.8rem;color:rgba(255,255,255,.5);transition:color .2s}
+.foot-col ul li a::before{content:'→ ';opacity:0;margin-right:0;transition:all .2s}
+.foot-col ul li a:hover{color:var(--blue-lt);padding-left:.3rem}
+.foot-col ul li a:hover::before{opacity:1}
+.fc-row{display:flex;align-items:flex-start;gap:.6rem;margin-bottom:.8rem}
+.fc-ic{font-size:.95rem;flex-shrink:0;margin-top:.1rem}
+.fc-txt{font-size:.79rem;color:rgba(255,255,255,.5);line-height:1.55}
+.foot-bottom{
+  padding:1.1rem 0;text-align:center;
+  font-size:.72rem;color:rgba(255,255,255,.3);
+}
+
+/* ─────────────────────────────────────────
+   WHATSAPP FAB
+───────────────────────────────────────── */
+.wa{
+  position:fixed;bottom:1.4rem;right:1.2rem;z-index:999;
+  width:58px;height:58px;border-radius:50%;
+  background:linear-gradient(135deg,#25D366,#128C7E);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 20px rgba(37,211,102,.45);
+  animation:waPulse 2.8s ease-in-out infinite;
+  transition:transform .2s var(--ease-spring);
+  border:none;
+}
+.wa:hover{transform:scale(1.12)}
+.wa svg{width:28px;height:28px;fill:#fff}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE – DESKTOP
+───────────────────────────────────────── */
+@media(min-width:640px){
+  .hero-ctas{flex-direction:row}
+  .c-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(min-width:768px){
+  .sp{padding:5.5rem 0}
+  .wrap{padding:0 1.5rem}
+  /* Nav */
+  .burger{display:none}
+  .nav-d{
+    display:flex;align-items:center;gap:.15rem;
+  }
+  .nav-d a{
+    padding:.45rem .9rem;border-radius:var(--r-xs);font-size:.84rem;
+    font-weight:600;color:var(--ink-2);transition:all .18s;
+  }
+  .nav-d a:hover{color:var(--blue);background:var(--blue-pale)}
+  .nav-d .nd-cta{
+    background:linear-gradient(135deg,var(--blue),var(--blue-lt));
+    color:#fff;border-radius:50px;padding:.48rem 1.2rem;margin-left:.3rem;
+    box-shadow:var(--s-blue);
+  }
+  .nav-d .nd-cta:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(26,86,219,.4);background:linear-gradient(135deg,var(--navy),var(--blue))}
+  .drawer{display:none!important}
+  /* Hero */
+  .hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:2.5rem;align-items:center}
+  .hero-visual{margin-top:0}
+  .hero-visual svg{max-width:400px}
+  .hero-ctas{flex-direction:row}
+  /* Grids */
+  .c-grid{grid-template-columns:repeat(2,1fr)}
+  .w-grid{grid-template-columns:repeat(2,1fr)}
+  .f-grid{grid-template-columns:repeat(2,1fr)}
+  /* Footer */
+  .foot-grid{grid-template-columns:repeat(3,1fr)}
+  .foot-top .wrap{display:grid;grid-template-columns:1fr 1.6fr;gap:3rem;align-items:start}
+  .foot-brand{margin-bottom:0}
+}
+
+@media(min-width:1024px){
+  .c-grid{grid-template-columns:repeat(4,1fr)}
+  .w-grid{grid-template-columns:repeat(4,1fr)}
+  .f-grid{grid-template-columns:repeat(4,1fr)}
+  .form-row{grid-template-columns:1fr 1fr}
+  .hero-visual svg{max-width:460px}
+  .nav-row{padding:.8rem 1.5rem}
+}
+</style>
+</head>
+<body>
+
+<!-- ══ NAVBAR ══════════════════════════════════════════════════ -->
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-row wrap">
+    <a href="#" class="logo" aria-label="KPratibha Academy Home">
+      <div class="logo-icon" aria-hidden="true">K</div>
+      <div class="logo-text">
+        <span class="logo-name">KPratibha Academy</span>
+        <span class="logo-loc">Sambalpur, Odisha</span>
+      </div>
+    </a>
+
+    <nav class="nav-d" aria-label="Desktop navigation">
+      <a href="#courses">Courses</a>
+      <a href="#why">About</a>
+      <a href="#results">Results</a>
+      <a href="#faculty">Faculty</a>
+      <a href="#notices">Notices</a>
+      <a href="#enquiry" class="nd-cta">Enrol Now →</a>
+    </nav>
+
+    <button class="burger" id="burgerBtn" aria-label="Toggle menu" aria-expanded="false">
+      <b></b><b></b><b></b>
+    </button>
+  </div>
+
+  <div class="drawer" id="drawer" role="menu">
+    <a href="#courses"  onclick="closeDrawer()" role="menuitem">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 6.25278V19.2528M12 6.25278C10.8321 5.47686 9.24649 5 7.5 5C5.75351 5 4.16789 5.47686 3 6.25278V19.2528C4.16789 18.4769 5.75351 18 7.5 18C9.24649 18 10.8321 18.4769 12 19.2528M12 6.25278C13.1679 5.47686 14.7535 5 16.5 5C18.2465 5 19.8321 5.47686 21 6.25278V19.2528C19.8321 18.4769 18.2465 18 16.5 18C14.7535 18 13.1679 18.4769 12 19.2528"/></svg>
+      Courses
+    </a>
+    <a href="#why"      onclick="closeDrawer()" role="menuitem">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+      Why Choose Us
+    </a>
+    <a href="#results"  onclick="closeDrawer()" role="menuitem">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+      Results
+    </a>
+    <a href="#faculty"  onclick="closeDrawer()" role="menuitem">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+      Faculty
+    </a>
+    <a href="#notices"  onclick="closeDrawer()" role="menuitem">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+      Notices
+    </a>
+    <div class="drawer-cta">
+      <a href="#enquiry" class="btn btn-primary btn-w" onclick="closeDrawer()">Admission Enquiry →</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ══ ANNOUNCEMENT BAR ════════════════════════════════════════ -->
+<div class="ann-bar" role="banner">
+  🎉 Admissions Open 2025–26 <span>·</span> Limited Seats Available <span>·</span>
+  <a href="#enquiry" style="color:#FBBF24;text-decoration:underline;font-weight:700">Enquire Now →</a>
+</div>
+
+<!-- ══ HERO ════════════════════════════════════════════════════ -->
+<section id="hero" aria-label="Hero">
+  <div class="wrap hero-grid">
+    <!-- Content -->
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-pill">★ 4.9 Rated</span>
+        <span class="badge-txt">Sambalpur's Most Trusted Coaching</span>
+      </div>
+
+      <h1 class="hero-h1">
+        Trusted Coaching for<br>
+        <span class="hl">Academic Excellence</span>
+      </h1>
+
+      <p class="hero-sub">
+        Comprehensive CBSE, ICSE &amp; State Board preparation for Class IV–X.
+        Expert faculty, personal attention, and a proven track record of results.
+      </p>
+
+      <div class="hero-tags">
+        <span class="tag">🎓 CBSE</span>
+        <span class="tag">📖 ICSE</span>
+        <span class="tag">📋 Board Prep</span>
+        <span class="tag">🏫 Class IV–X</span>
+      </div>
+
+      <div class="hero-ctas">
+        <a href="#enquiry" class="btn btn-warm btn-w">🎒 Admission Open</a>
+        <a href="https://wa.me/917894561230" class="btn btn-primary btn-w">💬 WhatsApp Us</a>
+      </div>
+
+      <div class="hero-rating">
+        <span class="rating-stars">★★★★★</span>
+        <span class="rating-txt">4.9 / 5.0</span>
+        <span class="rating-count">(200+ parent reviews)</span>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-tile">
+          <div class="stat-n">500+</div>
+          <div class="stat-l">Students Enrolled</div>
+        </div>
+        <div class="stat-tile">
+          <div class="stat-n">12+</div>
+          <div class="stat-l">Years of Excellence</div>
+        </div>
+        <div class="stat-tile">
+          <div class="stat-n">98%</div>
+          <div class="stat-l">Board Pass Rate</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Illustration -->
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-svg-wrap">
+        <svg viewBox="0 0 440 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="gNav" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#0B1D3A"/>
+              <stop offset="100%" stop-color="#1A56DB"/>
+            </linearGradient>
+            <linearGradient id="gBlue" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#1A56DB"/>
+              <stop offset="100%" stop-color="#0EA5E9"/>
+            </linearGradient>
+            <linearGradient id="gAmber" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#F59E0B"/>
+              <stop offset="100%" stop-color="#F97316"/>
+            </linearGradient>
+            <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+              <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#1A56DB" flood-opacity=".18"/>
+            </filter>
+          </defs>
+          <!-- Soft background circle -->
+          <circle cx="220" cy="200" r="175" fill="url(#gBlue)" opacity=".07"/>
+          <!-- Desk surface -->
+          <rect x="75" y="282" width="285" height="14" rx="7" fill="#0B1D3A" opacity=".12"/>
+          <!-- Laptop body -->
+          <rect x="140" y="165" width="148" height="104" rx="14" fill="url(#gNav)" filter="url(#soft)"/>
+          <rect x="148" y="173" width="132" height="84" rx="9" fill="#EFF6FF"/>
+          <!-- Screen content -->
+          <rect x="156" y="180" width="116" height="10" rx="5" fill="#1A56DB"/>
+          <rect x="156" y="196" width="85" height="6" rx="3" fill="#DBEAFE"/>
+          <rect x="156" y="207" width="100" height="6" rx="3" fill="#DBEAFE"/>
+          <rect x="156" y="218" width="70" height="6" rx="3" fill="#DBEAFE"/>
+          <rect x="156" y="229" width="90" height="6" rx="3" fill="#DBEAFE"/>
+          <rect x="156" y="240" width="55" height="14" rx="7" fill="#1A56DB" opacity=".7"/>
+          <!-- Laptop base / hinge -->
+          <rect x="130" y="269" width="168" height="10" rx="5" fill="#0B1D3A" opacity=".25"/>
+          <rect x="185" y="276" width="58" height="8" rx="4" fill="#0B1D3A" opacity=".15"/>
+          <!-- Student character -->
+          <circle cx="108" cy="204" r="30" fill="url(#gBlue)" opacity=".9"/>
+          <circle cx="108" cy="196" r="15" fill="#FEF3C7"/>
+          <circle cx="103" cy="194" r="2.2" fill="#0B1D3A"/>
+          <circle cx="113" cy="194" r="2.2" fill="#0B1D3A"/>
+          <path d="M103 200 Q108 205 113 200" stroke="#0B1D3A" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+          <rect x="93" y="214" width="30" height="24" rx="12" fill="url(#gNav)"/>
+          <!-- Open book -->
+          <rect x="72" y="228" width="36" height="46" rx="5" fill="#fff" stroke="#1A56DB" stroke-width="1.8"/>
+          <line x1="90" y1="228" x2="90" y2="274" stroke="#1A56DB" stroke-width="1.5"/>
+          <rect x="76" y="236" width="10" height="3" rx="1.5" fill="#DBEAFE"/>
+          <rect x="76" y="243" width="12" height="3" rx="1.5" fill="#DBEAFE"/>
+          <rect x="76" y="250" width="8"  height="3" rx="1.5" fill="#DBEAFE"/>
+          <rect x="93" y="236" width="11" height="3" rx="1.5" fill="#DBEAFE"/>
+          <rect x="93" y="243" width="9"  height="3" rx="1.5" fill="#DBEAFE"/>
+          <rect x="93" y="250" width="13" height="3" rx="1.5" fill="#DBEAFE"/>
+          <!-- Floating subjects -->
+          <circle cx="328" cy="116" r="34" fill="#EFF6FF" opacity=".95"/>
+          <text x="314" y="124" font-size="24">📐</text>
+          <circle cx="350" cy="228" r="28" fill="#FEF3C7" opacity=".95"/>
+          <text x="337" y="237" font-size="20">🔬</text>
+          <circle cx="74"  cy="136" r="26" fill="#FCE7F3" opacity=".95"/>
+          <text x="62"  y="145" font-size="19">📚</text>
+          <circle cx="345" cy="320" r="22" fill="#DCFCE7" opacity=".95"/>
+          <text x="334" y="329" font-size="17">📝</text>
+          <!-- Gold stars -->
+          <text x="288" y="160" font-size="13" fill="#F59E0B">★</text>
+          <text x="300" y="182" font-size="9"  fill="#F59E0B">★</text>
+          <text x="278" y="172" font-size="9"  fill="#F59E0B">★</text>
+          <!-- Award circle -->
+          <circle cx="325" cy="292" r="35" fill="url(#gAmber)" filter="url(#soft)"/>
+          <text x="315" y="288" font-size="12" fill="#fff" font-weight="bold" font-family="sans-serif">4.9 ★</text>
+          <text x="310" y="303" font-size="9"  fill="rgba(255,255,255,.8)" font-family="sans-serif">Rated</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TRUST STRIP ═════════════════════════════════════════════ -->
+<div class="trust-strip" aria-label="Trust indicators">
+  <div class="wrap trust-inner">
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+      CBSE &amp; ICSE Certified
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+      Expert Faculty
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+      98% Pass Rate
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      Since 2012 · 12+ Years
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+      4.9 ★ Parent Rating
+    </div>
+  </div>
+</div>
+
+<!-- ══ COURSES ══════════════════════════════════════════════════ -->
+<section id="courses" class="sp" aria-labelledby="courses-h">
+  <div class="wrap">
+    <div class="sh rev">
+      <div class="eyebrow">📚 What We Offer</div>
+      <h2 id="courses-h">Courses Offered</h2>
+      <p>Structured programmes designed to build mastery from primary school through board examinations.</p>
+    </div>
+    <div class="c-grid">
+      <div class="c-card rev rev-d1">
+        <div class="c-icon" style="background:#EFF6FF;">📘</div>
+        <h3>CBSE Coaching</h3>
+        <p>Complete NCERT-aligned curriculum with regular mock tests, concept clarity sessions and personalised doubt-clearing.</p>
+        <div class="c-tag"><span class="tag">Class VI – X</span></div>
+      </div>
+      <div class="c-card rev rev-d2">
+        <div class="c-icon" style="background:#F0FDF4;">📗</div>
+        <h3>ICSE Coaching</h3>
+        <p>In-depth subject coverage aligned with ICSE board patterns, analytical writing skills and exam strategy training.</p>
+        <div class="c-tag"><span class="tag">Class VI – X</span></div>
+      </div>
+      <div class="c-card rev rev-d3">
+        <div class="c-icon" style="background:#FFFBEB;">📙</div>
+        <h3>Board Exam Prep</h3>
+        <p>Intensive revision modules, previous year paper practice and strategic time-management techniques for Class X.</p>
+        <div class="c-tag"><span class="tag">Class X</span></div>
+      </div>
+      <div class="c-card rev rev-d4">
+        <div class="c-icon" style="background:#FDF2F8;">🏫</div>
+        <h3>Junior Tuition</h3>
+        <p>Strong foundational learning for young students using interactive, activity-based and child-friendly teaching methods.</p>
+        <div class="c-tag"><span class="tag">Class IV – V</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHY US ════════════════════════════════════════════════════ -->
+<section id="why" class="sp" aria-labelledby="why-h">
+  <div class="wrap">
+    <div class="sh rev">
+      <div class="eyebrow">⭐ Our Edge</div>
+      <h2 id="why-h">Why Choose Us</h2>
+      <p>KPratibha Academy goes far beyond textbooks — we build confident, exam-ready students.</p>
+    </div>
+    <div class="w-grid">
+      <div class="w-card rev rev-d1">
+        <div class="w-ic" style="background:#EFF6FF;">🎯</div>
+        <h3>Student-Focused Teaching</h3>
+        <p>Every lesson is tailored to the student's unique pace, learning style, and comprehension level.</p>
+      </div>
+      <div class="w-card rev rev-d2">
+        <div class="w-ic" style="background:#F0FDF4;">👨‍🏫</div>
+        <h3>Experienced Guidance</h3>
+        <p>Our faculty carry 10+ years of dedicated board exam coaching experience and exceptional student outcomes.</p>
+      </div>
+      <div class="w-card rev rev-d3">
+        <div class="w-ic" style="background:#FFFBEB;">📝</div>
+        <h3>Regular Tests &amp; Feedback</h3>
+        <p>Weekly assessments with detailed written feedback and progress reports shared directly with parents.</p>
+      </div>
+      <div class="w-card rev rev-d4">
+        <div class="w-ic" style="background:#FDF2F8;">🤝</div>
+        <h3>Personal Attention</h3>
+        <p>Small, focused batches ensure every student receives individual guidance and complete doubt resolution.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ RESULTS & TESTIMONIALS ════════════════════════════════════ -->
+<section id="results" class="sp" aria-labelledby="results-h">
+  <div class="wrap">
+    <div class="sh rev">
+      <div class="eyebrow">🏆 Proven Excellence</div>
+      <h2 id="results-h">Results &amp; Testimonials</h2>
+      <p>Our students consistently achieve top marks — and our parents trust us year after year.</p>
+    </div>
+
+    <div class="results-stats rev">
+      <div class="rs-tile">
+        <div class="rs-n">98%</div>
+        <div class="rs-l">Pass Rate 2024</div>
+      </div>
+      <div class="rs-tile">
+        <div class="rs-n">45+</div>
+        <div class="rs-l">Distinctions</div>
+      </div>
+      <div class="rs-tile">
+        <div class="rs-n">500+</div>
+        <div class="rs-l">Happy Alumni</div>
+      </div>
+    </div>
+
+    <div class="tscroll rev" id="tscroll" role="list" aria-label="Testimonials">
+      <article class="t-card" role="listitem">
+        <div class="t-stars" aria-label="5 stars">★★★★★</div>
+        <p class="t-body">"KPratibha Academy completely transformed my daughter's approach to studies. The teachers are incredibly patient and explain concepts until every student truly understands."</p>
+        <div class="t-author">
+          <div class="t-av" style="background:linear-gradient(135deg,#1A56DB,#0EA5E9)">S</div>
+          <div>
+            <div class="t-name">Supriya Sahu</div>
+            <div class="t-role">Parent · Class X Student</div>
+          </div>
+        </div>
+      </article>
+      <article class="t-card" role="listitem">
+        <div class="t-stars" aria-label="5 stars">★★★★★</div>
+        <p class="t-body">"I scored 94% in my board exams thanks to the excellent coaching here. Regular mock tests built so much confidence in me before the actual exam. Highly recommended!"</p>
+        <div class="t-author">
+          <div class="t-av" style="background:linear-gradient(135deg,#10B981,#059669)">A</div>
+          <div>
+            <div class="t-name">Aryan Patel</div>
+            <div class="t-role">CBSE Topper · 94%</div>
+          </div>
+        </div>
+      </article>
+      <article class="t-card" role="listitem">
+        <div class="t-stars" aria-label="5 stars">★★★★★</div>
+        <p class="t-body">"The faculty is outstanding. My son's Maths marks jumped from 65 to 91 in a single semester. The personal attention each student receives makes all the difference."</p>
+        <div class="t-author">
+          <div class="t-av" style="background:linear-gradient(135deg,#F59E0B,#F97316)">P</div>
+          <div>
+            <div class="t-name">Priti Mohanty</div>
+            <div class="t-role">Parent · Sambalpur</div>
+          </div>
+        </div>
+      </article>
+      <article class="t-card" role="listitem">
+        <div class="t-stars" aria-label="5 stars">★★★★★</div>
+        <p class="t-body">"Best coaching institute in Sambalpur. The study material is excellent and the weekend revision sessions are incredibly helpful right before exams."</p>
+        <div class="t-author">
+          <div class="t-av" style="background:linear-gradient(135deg,#8B5CF6,#6D28D9)">R</div>
+          <div>
+            <div class="t-name">Riya Das</div>
+            <div class="t-role">ICSE Student · Class IX</div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="t-dots rev" id="tDots" role="tablist" aria-label="Testimonial navigation"></div>
+    <p class="swipe-hint rev">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+      Swipe to read more
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+    </p>
+  </div>
+</section>
+
+<!-- ══ NOTICE BOARD ══════════════════════════════════════════════ -->
+<section id="notices" class="sp" aria-labelledby="notices-h">
+  <div class="wrap">
+    <div class="sh rev">
+      <div class="eyebrow">📌 Stay Updated</div>
+      <h2 id="notices-h">Notice Board</h2>
+      <p>Latest announcements, upcoming events and important academy updates.</p>
+    </div>
+    <div class="n-list">
+      <div class="n-item type-new rev rev-d1">
+        <span class="n-badge new">New</span>
+        <div>
+          <div class="n-title">Admissions Open for 2025–26 Academic Year</div>
+          <div class="n-desc">Enrolments now accepting for all classes IV–X. Limited seats available — apply early.</div>
+          <div class="n-meta">📅 May 20, 2026</div>
+        </div>
+      </div>
+      <div class="n-item type-event rev rev-d2">
+        <span class="n-badge event">Event</span>
+        <div>
+          <div class="n-title">Annual Science Exhibition – June 15</div>
+          <div class="n-desc">Students are invited to submit projects by June 5. Prizes awarded to the top 3 entries.</div>
+          <div class="n-meta">📅 June 15, 2026</div>
+        </div>
+      </div>
+      <div class="n-item type-update rev rev-d3">
+        <span class="n-badge update">Update</span>
+        <div>
+          <div class="n-title">Summer Batch Schedule Released</div>
+          <div class="n-desc">Special summer intensive batches starting June 1 for Class IX &amp; X students.</div>
+          <div class="n-meta">📅 June 1, 2026</div>
+        </div>
+      </div>
+      <div class="n-item type-event rev rev-d4">
+        <span class="n-badge event">Event</span>
+        <div>
+          <div class="n-title">Parent-Teacher Meeting – May 28</div>
+          <div class="n-desc">Quarterly PTM for all enrolled students. Attendance is mandatory for parents/guardians.</div>
+          <div class="n-meta">📅 May 28, 2026</div>
+        </div>
+      </div>
+      <div class="n-item type-new rev">
+        <span class="n-badge new">New</span>
+        <div>
+          <div class="n-title">Mock Board Test Series Begins – June 10</div>
+          <div class="n-desc">Full-syllabus mock tests for Class X students. Register at the front desk before June 8.</div>
+          <div class="n-meta">📅 June 10, 2026</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FACULTY ═══════════════════════════════════════════════════ -->
+<section id="faculty" class="sp" style="background:var(--surface)" aria-labelledby="faculty-h">
+  <div class="wrap">
+    <div class="sh rev">
+      <div class="eyebrow">👨‍🏫 Our Educators</div>
+      <h2 id="faculty-h">Meet Our Faculty</h2>
+      <p>Passionate, experienced educators dedicated entirely to your child's academic success.</p>
+    </div>
+    <div class="f-grid">
+      <div class="f-card rev rev-d1">
+        <div class="f-head">
+          <div class="f-av">SK</div>
+          <div class="f-name">Sanjay Kumar</div>
+        </div>
+        <div class="f-body">
+          <div class="f-subj">Mathematics &amp; Physics</div>
+          <span class="f-exp">🏅 15 Years Experience</span>
+        </div>
+      </div>
+      <div class="f-card rev rev-d2">
+        <div class="f-head">
+          <div class="f-av">PM</div>
+          <div class="f-name">Priya Mishra</div>
+        </div>
+        <div class="f-body">
+          <div class="f-subj">English &amp; Social Studies</div>
+          <span class="f-exp">🏅 12 Years Experience</span>
+        </div>
+      </div>
+      <div class="f-card rev rev-d3">
+        <div class="f-head">
+          <div class="f-av">RB</div>
+          <div class="f-name">Rakesh Behera</div>
+        </div>
+        <div class="f-body">
+          <div class="f-subj">Science &amp; Biology</div>
+          <span class="f-exp">🏅 10 Years Experience</span>
+        </div>
+      </div>
+      <div class="f-card rev rev-d4">
+        <div class="f-head">
+          <div class="f-av">SD</div>
+          <div class="f-name">Sunita Dash</div>
+        </div>
+        <div class="f-body">
+          <div class="f-subj">Hindi &amp; Sanskrit</div>
+          <span class="f-exp">🏅 8 Years Experience</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ENQUIRY FORM ══════════════════════════════════════════════ -->
+<section id="enquiry" class="sp" aria-labelledby="enquiry-h">
+  <div class="wrap eq-inner">
+    <div class="eq-top rev">
+      <div class="eyebrow">📋 Admissions</div>
+      <h2 id="enquiry-h">Admission Enquiry</h2>
+      <p>Fill the form below and our team will reach out within 24 hours.</p>
+    </div>
+    <div class="form-shell rev">
+      <form id="eqForm" novalidate>
+        <div class="form-row">
+          <div class="fg">
+            <label for="sname">Student's Name</label>
+            <input type="text" id="sname" name="sname" placeholder="Full name" required autocomplete="off">
+          </div>
+          <div class="fg">
+            <label for="cls">Class Applying For</label>
+            <select id="cls" name="cls" required>
+              <option value="">Select Class</option>
+              <option>Class IV</option><option>Class V</option>
+              <option>Class VI</option><option>Class VII</option>
+              <option>Class VIII</option><option>Class IX</option>
+              <option>Class X</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="fg">
+            <label for="pname">Parent's Name</label>
+            <input type="text" id="pname" name="pname" placeholder="Parent / Guardian name" required>
+          </div>
+          <div class="fg">
+            <label for="phone">Mobile Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required>
+          </div>
+        </div>
+        <div class="fg">
+          <label for="board">Curriculum Board</label>
+          <select id="board" name="board" required>
+            <option value="">Select Board</option>
+            <option>CBSE</option>
+            <option>ICSE</option>
+            <option>Odisha State Board</option>
+            <option>Not Sure</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label for="msg">Message <span style="opacity:.5;font-weight:400">(Optional)</span></label>
+          <textarea id="msg" name="msg" placeholder="Any specific queries or requirements…"></textarea>
+        </div>
+        <button type="submit" class="submit-btn" id="submitBtn">
+          Submit Enquiry →
+        </button>
+        <p class="form-note">🔒 Your information is private and will never be shared.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ═════════════════════════════════════════════════════ -->
+<footer id="footer" role="contentinfo">
+  <div class="foot-top">
+    <div class="wrap">
+      <div class="foot-brand">
+        <div class="foot-logo">
+          <div class="foot-logo-ic">K</div>
+          <span class="foot-logo-name">KPratibha Academy</span>
+        </div>
+        <p class="foot-desc">Nurturing academic excellence and building bright futures in Sambalpur, Odisha since 2012.</p>
+        <div class="foot-social" aria-label="Social media links">
+          <a class="soc" href="#" aria-label="Facebook">f</a>
+          <a class="soc" href="#" aria-label="Instagram">ig</a>
+          <a class="soc" href="https://wa.me/917894561230" aria-label="WhatsApp">W</a>
+          <a class="soc" href="#" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+      <div class="foot-grid">
+        <div class="foot-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#courses">Courses Offered</a></li>
+            <li><a href="#why">Why Choose Us</a></li>
+            <li><a href="#results">Results &amp; Testimonials</a></li>
+            <li><a href="#faculty">Our Faculty</a></li>
+            <li><a href="#notices">Notice Board</a></li>
+            <li><a href="#enquiry">Enquiry Form</a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h4>Programmes</h4>
+          <ul>
+            <li><a href="#">CBSE Coaching</a></li>
+            <li><a href="#">ICSE Coaching</a></li>
+            <li><a href="#">Board Exam Preparation</a></li>
+            <li><a href="#">Class IV–V Tuition</a></li>
+            <li><a href="#">Summer Batches</a></li>
+            <li><a href="#">Mock Test Series</a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h4>Contact Us</h4>
+          <div class="fc-row">
+            <span class="fc-ic">📍</span>
+            <span class="fc-txt">Near Power House Square, Ainthapali, Sambalpur, Odisha – 768004</span>
+          </div>
+          <div class="fc-row">
+            <span class="fc-ic">📞</span>
+            <span class="fc-txt">+91 78945 61230<br>+91 89764 32100</span>
+          </div>
+          <div class="fc-row">
+            <span class="fc-ic">✉️</span>
+            <span class="fc-txt">info@kpratibhaacademy.com</span>
+          </div>
+          <div class="fc-row">
+            <span class="fc-ic">🕐</span>
+            <span class="fc-txt">Mon – Sat &nbsp;·&nbsp; 7:00 AM – 8:00 PM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <div class="wrap">
+      © 2026 KPratibha Academy, Sambalpur, Odisha. All rights reserved.
+      &nbsp;·&nbsp; Crafted with ❤️ for excellence in education.
+    </div>
+  </div>
+</footer>
+
+<!-- ══ WHATSAPP FAB ════════════════════════════════════════════════ -->
+<a href="https://wa.me/917894561230" class="wa" aria-label="Chat on WhatsApp" rel="noopener">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- ══ JAVASCRIPT ══════════════════════════════════════════════════ -->
+<script>
+/* ── Nav ── */
+const nav   = document.getElementById('nav');
+const btn   = document.getElementById('burgerBtn');
+const drawer= document.getElementById('drawer');
+
+btn.addEventListener('click', () => {
+  const open = drawer.classList.toggle('show');
+  btn.classList.toggle('x', open);
+  btn.setAttribute('aria-expanded', open);
+});
+function closeDrawer(){
+  drawer.classList.remove('show');
+  btn.classList.remove('x');
+  btn.setAttribute('aria-expanded','false');
+}
+document.addEventListener('click', e => {
+  if(!nav.contains(e.target)) closeDrawer();
+});
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 24);
+}, {passive:true});
+
+/* ── Scroll reveal ── */
+const io = new IntersectionObserver(entries => {
+  entries.forEach((en,i) => {
+    if(en.isIntersecting){
+      en.target.classList.add('on');
+      io.unobserve(en.target);
+    }
+  });
+}, {threshold:.1, rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.rev').forEach(el => io.observe(el));
+
+/* ── Testimonial dots ── */
+(function(){
+  const scroll = document.getElementById('tscroll');
+  const dotsEl = document.getElementById('tDots');
+  if(!scroll||!dotsEl) return;
+  const cards = scroll.querySelectorAll('.t-card');
+  cards.forEach((_,i)=>{
+    const d = document.createElement('button');
+    d.className='t-dot'+(i===0?' active':'');
+    d.setAttribute('aria-label','Go to testimonial '+(i+1));
+    d.addEventListener('click',()=>{
+      cards[i].scrollIntoView({behavior:'smooth',block:'nearest',inline:'start'});
+    });
+    dotsEl.appendChild(d);
+  });
+  scroll.addEventListener('scroll',()=>{
+    const idx = Math.round(scroll.scrollLeft / (scroll.querySelector('.t-card').offsetWidth + 16));
+    dotsEl.querySelectorAll('.t-dot').forEach((d,i)=>d.classList.toggle('active',i===idx));
+  },{passive:true});
+})();
+
+/* ── Form ── */
+document.getElementById('eqForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const s = document.getElementById('submitBtn');
+  s.textContent = '✅ Enquiry Submitted!';
+  s.style.background = 'linear-gradient(135deg,#10B981,#059669)';
+  s.style.boxShadow  = '0 8px 28px rgba(16,185,129,.45)';
+  s.disabled = true;
+  setTimeout(()=>{
+    s.textContent = 'Submit Enquiry →';
+    s.style.background = '';
+    s.style.boxShadow  = '';
+    s.disabled = false;
+    this.reset();
+  }, 3500);
+});
+</script>
+</body>
+</html>
